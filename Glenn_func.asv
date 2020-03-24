@@ -1,0 +1,17 @@
+function [Glenn_output, Glenn_f] = Glenn_func()
+
+[Glenn_y, Glenn_f] = audioread('Glenn.wav');
+
+rand_Glenn =  permr;
+
+switch rand_Glenn
+    case 1
+        selected_Glenn = Glenn_y((Glenn_f * 17 : Glenn_f * 20 ), :);
+    case 2
+        selected_Glenn = Glenn_y((Glenn_f * 89.2 : Glenn_f * 93.3), :);
+end
+
+Glenn_output = selected_Glenn;
+
+end
+

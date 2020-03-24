@@ -1,0 +1,51 @@
+function bib_time = bib_func(min_song, max_song, player, drink)
+song_time = min_song + (max_song-min_song)*rand;
+clf
+    function song_func()
+        a =  text(1,1,player);
+        a.FontSize = 80;
+        set(a,'visible','on','HorizontalAlignment','center','VerticalAlignment','middle')
+        set(gca,'visible','off','xlim',[0 2],'ylim',[0 2],'Position',[0 0 1 1],'Color','r') ;
+        set(gca,'visible','on','Color','r') ;
+        pause(0.1)
+        set(gca,'visible','on','Color','g') ;      
+        pause(0.1)
+    end
+
+if drink == "Wine"
+    [y, f] = audioread('BIB.wav');
+    cutData = y(floor((f * (74.8 - 1))) + 1 : ceil(f * (74.8 + song_time - 1)), :);
+
+elseif drink == "beer"
+    [y, f] = audioread('Beer.wav');
+    cutData = y((f * (74.8 - 1)) + 1 : f * (74.8 + song_time - 1), :);
+
+end
+%%
+Glenn1 = y((f * 8.5 : f * 9 ), :);
+Glenn2 = y((f * 12.7 : f * 14 ), :);
+Glenn3 = y((f * 17 : f * 19.5 ), :);
+Glenn4 = y((f * 57 : f * 58.2 ), :);
+Glenn5 = y((f * 68.5 : f * 69.5 ), :);
+Glenn6 = y((f * 8 : f * 80), :);
+
+
+sound(Glenn6,f)
+
+%%
+
+
+sound(cutData,f);
+figure(1)
+t0 = clock;
+while etime(clock, t0) < song_time
+    song_func();
+end
+
+bib_time = song_time;
+clear sound
+end
+
+
+
+
