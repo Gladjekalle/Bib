@@ -2,7 +2,7 @@ function [Glenn_output, Glenn_f] = Glenn_func()
 
 [Glenn_y, Glenn_f] = audioread('Glenn.wav');
 
-rand_Glenn =  7;
+rand_Glenn =  randperm(9,1);
 
 switch rand_Glenn
     case 1

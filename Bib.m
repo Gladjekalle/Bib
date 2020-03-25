@@ -7,7 +7,7 @@ players = ["Steffe"; "Jake the Snake"; "Jepser"; "Kale"; "will.I.am"; "Attentatn
 %Increase extra_players to increase chance of "Alla"
 extra_players = 1;
 % Drink can be Wine or Beer
-drink = "Beer";
+drink = "Wine";
 
 players_drink = zeros(length(players),1);
 figure(1)
