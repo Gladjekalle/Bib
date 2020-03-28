@@ -1,4 +1,5 @@
 %% Set players and reset game
+% This is changed before drinking
 clf
 clear all
 
@@ -6,23 +7,27 @@ players = ["Steffe"; "Jake the Snake"; "Jepser"; "Kale"; "will.I.am"; "Attentatn
 
 %Increase extra_players to increase chance of "Alla"
 extra_players = 1;
-% Drink can be Wine or Beer
-drink = "Wine";
 
 players_drink = zeros(length(players),1);
 figure(1)
-%% Time setup
 
-max_time = 15;
-min_time = 8;
-max_song = 7;
-min_song = 3;
-no_rounds = 3;
+%% Setup
+% This can be changed during drinktime
+
+% Drink can be Wine or Beer
+drink = "Wine";
+
+max_time = 300;
+min_time = 120;
+max_song = 10;
+min_song = 4;
+no_rounds = 6;
 
 %% Game start
 figure(1)
 
 rng('shuffle');
+
 j = 0;
 for i = 1:no_rounds
     rand_time = min_time + (max_time - min_time)*rand;
@@ -42,7 +47,7 @@ for i = 1:no_rounds
     while(stat==true)
         tmp_time = tmp_time - 1;
         if tmp_time == 5
-            sound(Glenn, Glenn_freq);
+             sound(Glenn, Glenn_freq);
         end
         
         if tmp_time < 6
