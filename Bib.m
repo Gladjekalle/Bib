@@ -15,13 +15,13 @@ figure(1)
 % This can be changed during drinktime
 
 % Drink can be Wine or Beer
-drink = "Wine";
+drink = "Kladdkaka";
 
 max_time = 300;
 min_time = 120;
 max_song = 10;
 min_song = 4;
-no_rounds = 6;
+no_rounds = 12;
 
 %% Game start
 figure(1)
