@@ -17,11 +17,11 @@ figure(1)
 % Drink can be Wine or Beer
 drink = "Kladdkaka";
 
-max_time = 300;
-min_time = 120;
-max_song = 10;
-min_song = 4;
-no_rounds = 12;
+max_time = 60;
+min_time = 30;
+max_song = 6;
+min_song = 2;
+no_rounds = 8;
 
 %% Game start
 figure(1)
