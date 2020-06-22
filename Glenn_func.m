@@ -4,7 +4,7 @@ function [Glenn_output, Glenn_f] = Glenn_func()
 
 rand_Glenn = randperm(10,1);
 
-if rand_Glenn == 10;
+if rand_Glenn == 10
     [Niklas_y, Niklas_f] = audioread('Niklas.wav');
 end
     
