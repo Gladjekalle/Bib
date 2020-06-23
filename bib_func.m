@@ -1,5 +1,5 @@
 function bib_time = bib_func(min_song, max_song, player, drink)
-song_time = min_song + (max_song-min_song)*rand;
+song_time = round(min_song + (max_song-min_song)*rand);
 clf
     function song_func()
         a =  text(1,1,player);
